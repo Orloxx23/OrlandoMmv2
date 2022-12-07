@@ -1,0 +1,78 @@
+.menu-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  height: 50px;
+  width: 125px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu-item {
+  font-size: 1.5rem;
+  color: #8c8c8c;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50% 44% 40% 60% / 44% 60% 50% 40%;
+  transition: 0.3s ease-in-out;
+  z-index: 5;
+}
+
+.menu-item-hover:hover {
+  background: #454545;
+  color: #ffffff;
+}
+
+.menu-item-hamburger {
+  z-index: 10;
+}
+
+.menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #303030;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
+  z-index: 9;
+}
+
+.menu-content-close {
+  display: none;
+}
+
+.select-language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-language button {
+  background: transparent;
+  border: none;
+  color: #8c8c8c;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.select-language button:hover {
+  color: rgb(185, 185, 185);
+}
+
+.select-language
+
+.language-active{
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+}
