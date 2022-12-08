@@ -4,6 +4,7 @@ import { CursorContext } from "../../context/CursorContext";
 import { Spin as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 export default function Menu() {
   const { setCursorVariant, setMenuOpen } = React.useContext(CursorContext);
@@ -11,7 +12,7 @@ export default function Menu() {
   const [menuState, setMenuState] = React.useState("closed");
   const [t, i18n] = useTranslation("global");
   const [language, setLanguage] = React.useState(
-    localStorage.getItem("language")
+    localStorage.getItem("language") || "en"
   );
 
   const handleMenu = () => {
@@ -37,6 +38,27 @@ export default function Menu() {
     i18n.changeLanguage(lng);
     setLanguage(lng);
     localStorage.setItem("language", lng);
+  };
+
+  const menuItems = [
+    {
+      title: t("menu.about"),
+      link: "/about",
+    },
+    {
+      title: t("menu.projects"),
+      link: "/projects",
+    },
+    {
+      title: t("menu.contact"),
+      link: "/contact",
+    },
+  ];
+
+  let navigate = useNavigate();
+  const goTo = (link) => {
+    handleMenu();
+    navigate(link);
   };
 
   return (
@@ -68,15 +90,35 @@ export default function Menu() {
           onMouseEnter={() => setCursorVariant("img")}
           onMouseLeave={() => setCursorVariant("default")}
         >
-          <Hamburger />
+          <Hamburger toggled={open} />
         </div>
       </div>
       <motion.div
-        className={open ? "menu-content" : "menu-content-close"}
+        className={open ? "menu-content" : "menu-content menu-content-close"}
         variants={variants}
         animate={menuState}
         style={{ right: "-100%", width: "50%" }}
-      ></motion.div>
+      >
+        <div className="menu-content-items">
+          {menuItems.map((item, index) => (
+            <motion.div
+              className="menu-content-item"
+              key={index}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.1 }}
+            >
+              <p
+                onClick={() => goTo(item.link)}
+                onMouseEnter={() => setCursorVariant("txt")}
+                onMouseLeave={() => setCursorVariant("default")}
+              >
+                {item.title}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
     </>
   );
 }

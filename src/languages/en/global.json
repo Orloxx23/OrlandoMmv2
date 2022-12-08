@@ -1,4 +1,10 @@
 {
+  "menu":{
+    "about": "About me",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+
   "coverpage": {
     "title": "Hi, I'm Orlando Mina",
     "circleText": "Orlando Mina  frontend developer  ",

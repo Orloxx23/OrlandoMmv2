@@ -17,6 +17,10 @@
   background: transparent;
 }
 
+/* body, main {
+  cursor: none;
+} */
+
 @keyframes wave{
   20%{
     border-radius: 45% 55% 40% 60% / 60% 58% 42% 40%;

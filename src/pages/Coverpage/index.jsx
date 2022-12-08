@@ -4,12 +4,14 @@ import "./coverpage.css";
 import meImg from "../../assets/img/me.png";
 import { CursorContext } from "../../context/CursorContext";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion, useIsPresent } from "framer-motion";
 
 export default function Coverpage() {
   const { setCursorVariant, menuOpen } = React.useContext(CursorContext);
   const [t, i18n] = useTranslation("global");
   const [move, setMove] = React.useState(menuOpen);
+
+  const isPresent = useIsPresent();
 
   React.useEffect(() => {
     setMove(menuOpen);
@@ -45,7 +47,7 @@ export default function Coverpage() {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.6, ease: "easeInOut" }}
+              transition={{ duration: 0.2, delay: 0.6, ease: "easeInOut" }}
             >
               {t("coverpage.about")}
             </motion.p>
@@ -55,6 +57,13 @@ export default function Coverpage() {
           <CircleText text={t("coverpage.circleText")} content={meImg} />
         </div>
       </motion.div>
+      <motion.div
+        initial={{ scaleX: 2 }}
+        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
+        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
+        style={{ originX: isPresent ? 0 : 2 }}
+        className="privacy-screen"
+      />
     </>
   );
 }
