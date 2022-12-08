@@ -58,10 +58,10 @@ export default function Coverpage() {
         </div>
       </motion.div>
       <motion.div
-        initial={{ scaleX: 2 }}
+        initial={{ scaleX: 1 }}
         animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
         exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
-        style={{ originX: isPresent ? 0 : 2 }}
+        style={{ originX: isPresent ? 0 : 1 }}
         className="privacy-screen"
       />
     </>
