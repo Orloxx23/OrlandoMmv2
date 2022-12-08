@@ -13,6 +13,7 @@ export default function CircleText({ text, content }) {
       <div className="spining-text-content">
         {content ? (
           <motion.img
+            draggable="false"
             src={content}
             alt="Orlando Mina"
             initial={{ opacity: 0, scale: 0.5 }}

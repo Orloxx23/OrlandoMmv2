@@ -42,6 +42,10 @@ export default function Menu() {
 
   const menuItems = [
     {
+      title: t("menu.home"),
+      link: "/",
+    },
+    {
       title: t("menu.about"),
       link: "/about",
     },

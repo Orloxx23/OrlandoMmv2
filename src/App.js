@@ -2,7 +2,7 @@ import React from "react";
 import { CursorProvider } from "./context/CursorContext";
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
-import { Routes, Route, useRoutes, useLocation } from "react-router-dom";
+import { useRoutes, useLocation } from "react-router-dom";
 import { About, Coverpage } from "./pages";
 import { AnimatePresence } from "framer-motion";
 

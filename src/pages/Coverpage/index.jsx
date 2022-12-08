@@ -5,6 +5,7 @@ import meImg from "../../assets/img/me.png";
 import { CursorContext } from "../../context/CursorContext";
 import { useTranslation } from "react-i18next";
 import { motion, useIsPresent } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 export default function Coverpage() {
   const { setCursorVariant, menuOpen } = React.useContext(CursorContext);
@@ -24,6 +25,11 @@ export default function Coverpage() {
     menuOpen: {
       left: "-50%",
     },
+  };
+
+  let navigate = useNavigate();
+  const goTo = (link) => {
+    navigate(link);
   };
 
   return (
@@ -51,6 +57,26 @@ export default function Coverpage() {
             >
               {t("coverpage.about")}
             </motion.p>
+            <div className="fast-access">
+              <div
+                className="fast-access-item"
+                onClick={() => goTo("/projects")}
+                onMouseEnter={() => setCursorVariant("txt")}
+                onMouseLeave={() => setCursorVariant("default")}
+              >
+                <i className="fa-solid fa-arrow-right-long"></i>
+                <span>{t("coverpage.projects")}</span>
+              </div>
+              <div
+                className="fast-access-item"
+                onClick={() => goTo("/about")}
+                onMouseEnter={() => setCursorVariant("txt")}
+                onMouseLeave={() => setCursorVariant("default")}
+              >
+                <i className="fa-solid fa-arrow-right-long"></i>
+                <span>{t("coverpage.moreMe")}</span>
+              </div>
+            </div>
           </div>
         </div>
         <div className="coverpage-right">

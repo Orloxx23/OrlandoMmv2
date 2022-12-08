@@ -1,5 +1,6 @@
 {
   "menu":{
+    "home": "Inicio",
     "about": "Sobre mi",
     "projects": "Proyectos",
     "contact": "Contacto"
@@ -7,6 +8,8 @@
   "coverpage": {
     "title": "Hola, Soy Orlando Mina",
     "circleText": "Orlando Mina  desarrollador frontend  ",
-    "about": "Soy desarrollador frontend con experiencia en React. Soy bueno en CSS y HTML, así como en JavaScript. Me encanta aprender cosas nuevas y experimentar con nuevas tecnologías. Tengo buen ojo para los detalles y siempre pongo todo de mi en mi trabajo."
+    "about": "Soy desarrollador frontend con experiencia en React. Soy bueno en CSS y HTML, así como en JavaScript. Me encanta aprender cosas nuevas y experimentar con nuevas tecnologías. Tengo buen ojo para los detalles y siempre pongo todo de mi en mi trabajo.",
+    "projects": "Mira mis proyectos",
+    "moreMe": "Mas sobre mi"
   }
 }

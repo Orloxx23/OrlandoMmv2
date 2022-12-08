@@ -30,7 +30,6 @@
   animation: spinText 160s linear infinite reverse;
   color: #fff;
   text-transform: uppercase;
-  font-family: "Staatliches", cursive;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;

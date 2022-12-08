@@ -60,6 +60,40 @@ body {
   z-index: 12;
 }
 
+.fast-access {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.fast-access-item {
+  margin-right: 5rem;
+  cursor: pointer;
+  color: rgb(179, 179, 179);
+  transition: all 0.5s ease;
+}
+
+.fast-access-item:hover {
+  color: #fff;
+}
+
+.fast-access-item i {
+  margin-right: 0.5rem;
+}
+
+.fast-access-item span {
+  font-weight: bold;
+  font-family: "Staatliches", cursive;
+  letter-spacing: 0.2rem;
+  transition: all 0.5s ease;
+}
+
+.fast-access-item span:hover {
+  letter-spacing: 0.45rem;
+}
+
 @media (max-width: 768px) {
   .coverpage {
     width: 100vw;
