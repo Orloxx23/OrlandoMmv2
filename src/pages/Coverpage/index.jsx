@@ -53,12 +53,15 @@ export default function Coverpage() {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.6, ease: "easeInOut" }}
+              transition={{ duration: 0.3, delay: 0.5, ease: "easeInOut" }}
             >
               {t("coverpage.about")}
             </motion.p>
             <div className="fast-access">
-              <div
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.2, delay: 0.8, ease: "easeInOut" }}
                 className="fast-access-item"
                 onClick={() => goTo("/projects")}
                 onMouseEnter={() => setCursorVariant("txt")}
@@ -66,8 +69,11 @@ export default function Coverpage() {
               >
                 <i className="fa-solid fa-arrow-right-long"></i>
                 <span>{t("coverpage.projects")}</span>
-              </div>
-              <div
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.2, delay: 1.2, ease: "easeInOut" }}
                 className="fast-access-item"
                 onClick={() => goTo("/about")}
                 onMouseEnter={() => setCursorVariant("txt")}
@@ -75,7 +81,7 @@ export default function Coverpage() {
               >
                 <i className="fa-solid fa-arrow-right-long"></i>
                 <span>{t("coverpage.moreMe")}</span>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
