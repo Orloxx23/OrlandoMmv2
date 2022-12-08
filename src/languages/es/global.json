@@ -11,5 +11,15 @@
     "about": "Soy desarrollador frontend con experiencia en React. Soy bueno en CSS y HTML, así como en JavaScript. Me encanta aprender cosas nuevas y experimentar con nuevas tecnologías. Tengo buen ojo para los detalles y siempre pongo todo de mi en mi trabajo.",
     "projects": "Mira mis proyectos",
     "moreMe": "Mas sobre mi"
+  },
+
+  "about":{
+    "title": "Sobre mi",
+    "text": "Orlando es desarrollador frontend con interes en el diseño de UX/UI. Es experto en HTML, CSS, JavaScript y React. Sus pasatiempo incluyen la música y los deportes electrónicos.",
+    "born": "Nacimiento",
+    "born-text": "23 de Mayo de 2002, Colombia ",
+    "education": "Educación",
+    "education-text": "Institución Universitaria Antonio José Camacho",
+    "profiles": "Perfiles"
   }
 }
