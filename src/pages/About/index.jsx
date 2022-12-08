@@ -44,12 +44,24 @@ export default function About() {
                 <span>{t("about.education-text")}</span>
               </div>
               <div className="about-profile-card-info-socials">
-                <a href="https://github.com/Orloxx23" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/Orloxx23"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setCursorVariant("txt")}
+                  onMouseLeave={() => setCursorVariant("default")}
+                >
                   <div className="about-profile-card-info-social">
                     <i className="fab fa-github"></i>
                   </div>
                 </a>
-                <a href="https://www.linkedin.com/in/orlandomm/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/orlandomm/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onMouseEnter={() => setCursorVariant("txt")}
+                  onMouseLeave={() => setCursorVariant("default")}
+                >
                   <div className="about-profile-card-info-social">
                     <i className="fab fa-linkedin"></i>
                   </div>
