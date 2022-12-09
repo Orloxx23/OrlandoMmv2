@@ -27,6 +27,8 @@
   },
 
   "discord":{
-    "playing": "Jugando a"
+    "playing": "Jugando a",
+    "online": "Conectado",
+    "offline": "Desconectado"
   }
 }

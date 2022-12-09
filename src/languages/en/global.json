@@ -28,6 +28,8 @@
   },
 
   "discord":{
-    "playing": "Playing"
+    "playing": "Playing",
+    "online": "Online",
+    "offline": "Offline"
   }
 }

@@ -30,11 +30,7 @@ export default function DiscordPresence() {
         animate={{ opacity: 1, y: 0 }}
         onMouseEnter={() => setCursorVariant("dark")}
         onMouseLeave={() => setCursorVariant("default")}
-        className={
-          discordData.length > 0
-            ? "discord-presence-container"
-            : "discord-presence-container discord-presence-offline"
-        }
+        className="discord-presence-container"
       >
         <div className="discord-presence-content">
           <div className="discord-presence-text">
@@ -42,12 +38,23 @@ export default function DiscordPresence() {
               Discord: <span>Orloxx#8101</span>
             </h5>
             <hr />
-            <p>
-              {t("discord.playing")}{" "}
-              <span>
-                {discordData.length > 0 ? discordData[0].game["name"] : "..."}
-              </span>
-            </p>
+
+            {discordData.length > 0 ? (
+              discordData[0].game ? (
+                <p>
+                  {t("discord.playing")}
+                  <span>{discordData[0].game["name"]}</span>
+                </p>
+              ) : (
+                <p>
+                  <span>{t("discord.online")}</span>
+                </p>
+              )
+            ) : (
+              <p>
+                <span>{t("discord.offline")}</span>
+              </p>
+            )}
           </div>
           <div className="discord-presence-img">
             <img
