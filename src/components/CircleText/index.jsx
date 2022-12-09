@@ -3,7 +3,7 @@ import { CursorContext } from "../../context/CursorContext";
 import "./circleText.css";
 import { motion } from "framer-motion";
 
-export default function CircleText({ text, content }) {
+export default function CircleText({ text, content, alpha }) {
   const { setCursorVariant } = React.useContext(CursorContext);
   const lenght = text.length;
   const deg = 360 / lenght;
@@ -23,6 +23,15 @@ export default function CircleText({ text, content }) {
             onMouseEnter={() => setCursorVariant("img")}
             onMouseLeave={() => setCursorVariant("default")}
           />
+        ) : !alpha ? (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            onMouseEnter={() => setCursorVariant("img")}
+            onMouseLeave={() => setCursorVariant("default")}
+            className="spining-text-no-content"
+          ></motion.div>
         ) : null}
       </div>
       <motion.div

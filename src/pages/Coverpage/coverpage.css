@@ -94,7 +94,7 @@ body {
   letter-spacing: 0.45rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .coverpage {
     width: 100vw;
     height: 100vh;

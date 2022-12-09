@@ -3,7 +3,7 @@ import { CursorProvider } from "./context/CursorContext";
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
 import { useRoutes, useLocation } from "react-router-dom";
-import { About, Coverpage } from "./pages";
+import { About, Contact, Coverpage } from "./pages";
 import { AnimatePresence } from "framer-motion";
 
 import global_en from "./languages/en/global.json";
@@ -26,12 +26,16 @@ i18next.init({
 function App() {
   const element = useRoutes([
     {
-      path: "/",
-      element: <Coverpage />,
+      path: "/contact",
+      element: <Contact />,
     },
     {
       path: "/about",
       element: <About />,
+    },
+    {
+      path: "/",
+      element: <Coverpage />,
     },
     {
       path: "*",

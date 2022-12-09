@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { CursorContext } from "../../context/CursorContext";
 
-export default function DiscordPresence() {
+export default function DiscordPresence({ showNick }) {
   const [discordData, setDiscordData] = React.useState([]);
   const [t, i18n] = useTranslation("global");
   const { setCursorVariant } = React.useContext(CursorContext);
@@ -34,10 +34,13 @@ export default function DiscordPresence() {
       >
         <div className="discord-presence-content">
           <div className="discord-presence-text">
-            <h5>
-              Discord
-              {/* Discord: <span>Orloxx#8101</span> */}
-            </h5>
+            {showNick ? (
+              <h5>
+                Discord: <span>Orloxx#8101</span>
+              </h5>
+            ) : (
+              <h5>Discord</h5>
+            )}
             <hr />
 
             {discordData.length > 0 ? (

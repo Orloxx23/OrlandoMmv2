@@ -31,5 +31,11 @@
     "playing": "Playing",
     "online": "Online",
     "offline": "Offline"
+  },
+
+  "contact":{
+    "circleText": "Contact - Contact - Contact - Contact - ",
+    "email": "Email",
+    "other": "Other sites"
   }
 }
