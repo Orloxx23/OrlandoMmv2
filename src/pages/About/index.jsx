@@ -76,37 +76,22 @@ export default function About() {
             <motion.h1
               initial={{ opacity: 0, x: 250 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
+              transition={{ delay: 0.5 }}
             >
               {t("about.title")}
             </motion.h1>
             <motion.div
               initial={{ opacity: 0, x: 250 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 }}
+              transition={{ delay: 0.8 }}
               className="about-bio-container"
             >
               <div className="about-bio-content">{t("about.bio")}</div>
             </motion.div>
-            {/* <h1>{t("about.achievements")}</h1>
-            <div className="more-about-items">
-              <div className="more-about-item">
-                
-              </div>
-              <div className="more-about-item">
-
-              </div>
-              <div className="more-about-item">
-
-              </div>
-              <div className="more-about-item">
-
-              </div>
-            </div> */}
             <motion.h1
               initial={{ opacity: 0, x: 250 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8 }}
+              transition={{ delay: 0.5 }}
             >
               {t("about.skills")}
             </motion.h1>
