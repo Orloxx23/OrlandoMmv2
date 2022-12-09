@@ -22,7 +22,7 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
           >
             <div className="about-profile-card-image">
-              <img src={meImg} alt="Orlando Mina" draggable="false" />
+              <img loading="lazy" src={meImg} alt="Orlando Mina" draggable="false" />
             </div>
             <div className="about-profile-card-name">
               <h1

@@ -20,6 +20,7 @@
 .spining-text-content img {
   border-radius: 50%;
   width: 100%;
+  background: #606060;
 }
 
 .spinning-text {
