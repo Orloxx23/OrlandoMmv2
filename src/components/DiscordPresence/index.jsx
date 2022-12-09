@@ -35,7 +35,8 @@ export default function DiscordPresence() {
         <div className="discord-presence-content">
           <div className="discord-presence-text">
             <h5>
-              Discord: <span>Orloxx#8101</span>
+              Discord
+              {/* Discord: <span>Orloxx#8101</span> */}
             </h5>
             <hr />
 
