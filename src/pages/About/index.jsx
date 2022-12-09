@@ -4,13 +4,14 @@ import meImg from "../../assets/img/me2.png";
 //import flag from "../../assets/img/colombia.png";
 import { CursorContext } from "../../context/CursorContext";
 import { useTranslation } from "react-i18next";
-import { motion } from "framer-motion";
+import { motion, useIsPresent } from "framer-motion";
 import { skills } from "../../assets/data/skills";
 import DiscordPresence from "../../components/DiscordPresence";
 
 export default function About() {
   const { setCursorVariant } = React.useContext(CursorContext);
   const [t, i18n] = useTranslation("global");
+  const isPresent = useIsPresent();
 
   return (
     <>
@@ -22,7 +23,12 @@ export default function About() {
             animate={{ opacity: 1, y: 0 }}
           >
             <div className="about-profile-card-image">
-              <img loading="lazy" src={meImg} alt="Orlando Mina" draggable="false" />
+              <img
+                loading="lazy"
+                src={meImg}
+                alt="Orlando Mina"
+                draggable="false"
+              />
             </div>
             <div className="about-profile-card-name">
               <h1
@@ -133,6 +139,13 @@ export default function About() {
           </div>
         </div>
       </div>
+      <motion.div
+        initial={{ scaleX: 1 }}
+        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
+        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
+        style={{ originX: isPresent ? 0 : 1 }}
+        className="privacy-screen"
+      />
     </>
   );
 }
