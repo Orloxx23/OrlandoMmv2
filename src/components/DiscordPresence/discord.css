@@ -1,0 +1,73 @@
+.discord-presence-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.discord-presence-content {
+  position: relative;
+  display: flex;
+  background: white;
+  color: #303030;
+  gap: 1rem;
+  border-radius: 999px;
+}
+
+.discord-presence-text {
+  max-width: 200px;
+  padding: 1rem;
+  margin-right: 3.5rem;
+  min-width: 200px;
+}
+
+.discord-presence-text h5 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.discord-presence-text h5 > span {
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+.discord-presence-text p {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.discord-presence-text p > span {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.discord-presence-img {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+}
+.discord-presence-img img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.discord-presence-state {
+  position: absolute;
+  bottom: 15px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.dp-active {
+  background: rgb(0, 207, 21);
+}
+
+.dp-desactive {
+  background: rgb(100, 100, 100);
+}
+
+.discord-presence-offline {
+  display: none;
+}

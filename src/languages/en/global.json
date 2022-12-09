@@ -16,11 +16,18 @@
 
   "about":{
     "title": "About me",
-    "text": "Orlando is a frontend developer with an interest in UX/UI design. He is an expert in HTML, CSS, JavaScript and React. His hobbies include music and esports.",
+    "text": "Orlando is a frontend developer with an interest in UX/UI design. He is an expert in HTML, CSS, JavaScript and React.",
     "born": "Born",
     "born-text": "23 May 2002, Colombia ",
     "education": "Education",
     "education-text": "Antonio Jose Camacho University",
-    "profiles": "Profiles"
+    "profiles": "Profiles",
+    "bio": "Hey, I'm Orlando. I like to play music and build things with code. I'm a systems engineer student at the Antonio Jose Camacho University (UNIAJC). I'm a 20 years old colombian guy. I like to play videogames and watch eSports competitions when I have time.",
+    "achievements": "Achievements",
+    "skills": "Skills and tools"
+  },
+
+  "discord":{
+    "playing": "Playing"
   }
 }

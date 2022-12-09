@@ -15,11 +15,18 @@
 
   "about":{
     "title": "Sobre mi",
-    "text": "Orlando es desarrollador frontend con interes en el diseño de UX/UI. Es experto en HTML, CSS, JavaScript y React. Sus pasatiempo incluyen la música y los deportes electrónicos.",
+    "text": "Orlando es desarrollador frontend con interes en el diseño de UX/UI. Es experto en HTML, CSS, JavaScript y React.",
     "born": "Nacimiento",
     "born-text": "23 de Mayo de 2002, Colombia ",
     "education": "Educación",
     "education-text": "Institución Universitaria Antonio José Camacho",
-    "profiles": "Perfiles"
+    "profiles": "Perfiles",
+    "bio": "Hola, soy Orlando. Me gusta tocar música y construir cosas con código. Soy estudiante de ingeniería en sistemas de la Universidad Antonio José Camacho (UNIAJC). Soy un chico colombiano de 20 años. Me gusta jugar videojuegos y ver competiciones de eSports cuando tengo tiempo.",
+    "achievements": "Logros",
+    "skills": "Habilidades y herramientas"
+  },
+
+  "discord":{
+    "playing": "Jugando a"
   }
 }

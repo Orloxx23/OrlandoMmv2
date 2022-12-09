@@ -5,10 +5,13 @@ import meImg from "../../assets/img/me2.png";
 import { CursorContext } from "../../context/CursorContext";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
+import { skills } from "../../assets/data/skills";
+import DiscordPresence from "../../components/DiscordPresence";
 
 export default function About() {
   const { setCursorVariant } = React.useContext(CursorContext);
   const [t, i18n] = useTranslation("global");
+
   return (
     <>
       <div className="about-main-container">
@@ -69,6 +72,80 @@ export default function About() {
               </div>
             </div>
           </motion.div>
+          <div className="more-about-container">
+            <motion.h1
+              initial={{ opacity: 0, x: 250 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              {t("about.title")}
+            </motion.h1>
+            <motion.div
+              initial={{ opacity: 0, x: 250 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.5 }}
+              className="about-bio-container"
+            >
+              <div className="about-bio-content">{t("about.bio")}</div>
+            </motion.div>
+            {/* <h1>{t("about.achievements")}</h1>
+            <div className="more-about-items">
+              <div className="more-about-item">
+                
+              </div>
+              <div className="more-about-item">
+
+              </div>
+              <div className="more-about-item">
+
+              </div>
+              <div className="more-about-item">
+
+              </div>
+            </div> */}
+            <motion.h1
+              initial={{ opacity: 0, x: 250 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.8 }}
+            >
+              {t("about.skills")}
+            </motion.h1>
+            <div className="more-about-skills-items">
+              {skills.map((skill) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: skill.id * 0.1 }}
+                  className="more-about-skills-item"
+                  key={skill.id}
+                >
+                  <i
+                    className={skill.icon}
+                    onMouseEnter={() => setCursorVariant("txt")}
+                    onMouseLeave={() => setCursorVariant("default")}
+                  ></i>
+                </motion.div>
+              ))}
+            </div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="more-about-last-container"
+            >
+              <motion.div
+                className="drag"
+                drag
+                dragConstraints={{
+                  top: -0,
+                  left: -0,
+                  right: 0,
+                  bottom: 0,
+                }}
+              >
+                <DiscordPresence />
+              </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </>

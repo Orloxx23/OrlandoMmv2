@@ -70,6 +70,14 @@ function CursorProvider(props) {
       height: 50,
       rotate: -360,
     },
+    dark: {
+      x: mousePosition.x - 6,
+      y: mousePosition.y - 6,
+      rotate: 360,
+      width: 12,
+      height: 12,
+      border: "2px dashed #303030",
+    }
   };
 
   return (
