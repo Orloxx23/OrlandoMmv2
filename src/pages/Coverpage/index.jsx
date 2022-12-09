@@ -28,7 +28,9 @@ export default function Coverpage() {
   };
 
   let navigate = useNavigate();
+  let location = window.location.pathname;
   const goTo = (link) => {
+    if (link === location) return;
     navigate(link);
   };
 

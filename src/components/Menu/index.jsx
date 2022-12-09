@@ -60,8 +60,10 @@ export default function Menu() {
   ];
 
   let navigate = useNavigate();
+  let location = window.location.pathname;
   const goTo = (link) => {
     handleMenu();
+    if(link === location) return;
     navigate(link);
   };
 
