@@ -36,6 +36,7 @@
   margin-bottom: 10%;
   user-select: none;
   pointer-events: none;
+  background: #606060;
 }
 
 .about-profile-card-name h1 {
@@ -110,6 +111,10 @@
   margin-left: auto;
   color: white;
   font-size: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
 }
 
 .about-bio-container {
@@ -148,10 +153,12 @@
 
 .more-about-skills-items {
   display: flex;
+  align-items: center;
   width: 90%;
   gap: 2rem;
   padding: 1.5rem;
-  overflow: auto;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
 
 .more-about-skills-items::-webkit-scrollbar {
@@ -177,7 +184,7 @@
   box-shadow: 20px 20px 60px #292929, -20px -20px 60px #373737;
 }
 
-.more-about-last-container-img{
+.more-about-last-container-img {
   position: absolute;
   width: 60%;
   height: 80%;
@@ -187,17 +194,16 @@
   pointer-events: none;
 }
 
-.more-about-last-container-img img{
+.more-about-last-container-img img {
   width: 100%;
   object-fit: cover;
-  
 }
 
-.drag{
+.drag {
   cursor: grab;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   main,
   body {
     overflow-y: scroll;
@@ -218,5 +224,13 @@
     width: 100%;
     padding: 20px 0;
     height: min-content;
+  }
+
+  .more-about-last-container {
+    margin: 1rem 0;
+  }
+
+  .more-about-skills-items {
+    margin-top: 1rem;
   }
 }
