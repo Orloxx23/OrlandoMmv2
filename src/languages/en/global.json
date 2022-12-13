@@ -37,5 +37,11 @@
     "circleText": "Contact - Contact - Contact - Contact - ",
     "email": "Email",
     "other": "Other sites"
+  },
+
+  "projects":{
+    "title": "Projects",
+    "preview": "Preview",
+    "text": "Here are some of my projects. I'm always working on new things, so check back later for updates."
   }
 }

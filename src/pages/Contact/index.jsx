@@ -8,7 +8,8 @@ import { CursorContext } from "../../context/CursorContext";
 export default function Contact() {
   const [t, i18n] = useTranslation("global");
   const isPresent = useIsPresent();
-  const { setCursorVariant } = React.useContext(CursorContext);
+  const { setCursorVariant, menuOpen } = React.useContext(CursorContext);
+  const [move, setMove] = React.useState(menuOpen);
 
   const sites = [
     {
@@ -21,9 +22,26 @@ export default function Contact() {
     },
   ];
 
+  React.useEffect(() => {
+    setMove(menuOpen);
+  }, [menuOpen]);
+
+  const variants = {
+    default: {
+      left: "0",
+    },
+    menuOpen: {
+      left: "-46%",
+    },
+  };
+
   return (
     <>
-      <div className="contact-container">
+      <motion.div
+        className="contact-container"
+        variants={variants}
+        animate={move ? "menuOpen" : "default"}
+      >
         <div className="contact-left">
           <CircleText text={t("contact.circleText")} alpha={false} />
         </div>
@@ -113,7 +131,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <motion.div
         initial={{ scaleX: 1 }}
         animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
