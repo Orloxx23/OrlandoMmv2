@@ -12,7 +12,7 @@ export default function Projects() {
   const [t, i18n] = useTranslation("global");
   const [preview, setPreview] = React.useState(null);
   const [name, setName] = React.useState(null);
-  const { setCursorVariant, menuOpen } = React.useContext(CursorContext);
+  const { setCursorVariant } = React.useContext(CursorContext);
 
   const setPreviewData = (project) => {
     if (project) {
