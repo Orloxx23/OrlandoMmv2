@@ -9,6 +9,7 @@ import { AnimatePresence } from "framer-motion";
 import global_en from "./languages/en/global.json";
 import global_es from "./languages/es/global.json";
 import { Menu } from "./components";
+import Projects from "./pages/Projects";
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -28,6 +29,10 @@ function App() {
     {
       path: "/contact",
       element: <Contact />,
+    },
+    {
+      path: "/projects",
+      element: <Projects />,
     },
     {
       path: "/about",
@@ -53,10 +58,6 @@ function App() {
           <AnimatePresence mode="wait">
             {React.cloneElement(element, { key: location.pathname })}
           </AnimatePresence>
-          {/* <Routes>
-            <Route path="/" exact element={<Coverpage />} />
-            <Route path="/about" element={<About />} />
-          </Routes> */}
         </I18nextProvider>
       </CursorProvider>
     </>
