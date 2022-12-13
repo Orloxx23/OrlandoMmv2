@@ -44,6 +44,8 @@
     text-transform: uppercase;
     text-align: center;
     flex-direction: column;
+    box-shadow: inset 0px 0px 5rem 1rem black;
+    border-radius: 1.25rem;
 }
 
 .preview-title p{
