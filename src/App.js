@@ -11,6 +11,7 @@ import global_es from "./languages/es/global.json";
 import { LoadScreen, Menu } from "./components";
 import Projects from "./pages/Projects";
 import { LoadingProvider } from "./context/LoadingContext";
+import "./global.css"
 
 i18next.init({
   interpolation: { escapeValue: false },
