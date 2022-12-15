@@ -4,10 +4,14 @@ import { useTranslation } from "react-i18next";
 import "./preview.css";
 import previewVideo from "../../assets/video/preview.mp4";
 import { CursorContext } from "../../context/CursorContext";
+import { LoadingContext } from "../../context/LoadingContext";
 
 export default function Preview({ img, name }) {
   const [t, i18n] = useTranslation("global");
   const { setCursorVariant } = React.useContext(CursorContext);
+  const { elementsLoaded, setElementsLoaded } =
+    React.useContext(LoadingContext);
+
   return (
     <>
       <div

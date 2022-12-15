@@ -4,12 +4,14 @@ import { CircleText, DiscordPresence } from "../../components";
 import "./contact.css";
 import { motion, useIsPresent } from "framer-motion";
 import { CursorContext } from "../../context/CursorContext";
+import { LoadingContext } from "../../context/LoadingContext";
 
 export default function Contact() {
   const [t, i18n] = useTranslation("global");
   const isPresent = useIsPresent();
   const { setCursorVariant, menuOpen } = React.useContext(CursorContext);
   const [move, setMove] = React.useState(menuOpen);
+  const { setElements } = React.useContext(LoadingContext);
 
   const sites = [
     {
@@ -25,6 +27,10 @@ export default function Contact() {
   React.useEffect(() => {
     setMove(menuOpen);
   }, [menuOpen]);
+
+  React.useEffect(() => {
+    setElements(1);
+  }, []);
 
   const variants = {
     default: {

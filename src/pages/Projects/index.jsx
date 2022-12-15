@@ -6,6 +6,7 @@ import "./projects.css";
 import { projects } from "../../assets/data/projects";
 import { Preview } from "../../components/";
 import { CursorContext } from "../../context/CursorContext";
+import { LoadingContext } from "../../context/LoadingContext";
 
 export default function Projects() {
   const isPresent = useIsPresent();
@@ -13,6 +14,7 @@ export default function Projects() {
   const [preview, setPreview] = React.useState(null);
   const [name, setName] = React.useState(null);
   const { setCursorVariant } = React.useContext(CursorContext);
+  const { setElements, setElementsLoaded } = React.useContext(LoadingContext);
 
   const setPreviewData = (project) => {
     if (project) {
@@ -25,6 +27,11 @@ export default function Projects() {
       setCursorVariant("default");
     }
   };
+
+  React.useEffect(() => {
+    setElements(1);
+    setElementsLoaded(1);
+  }, []);
 
   return (
     <>

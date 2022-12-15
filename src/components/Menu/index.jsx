@@ -5,6 +5,7 @@ import { Spin as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
+import { LoadingContext } from "../../context/LoadingContext";
 
 export default function Menu() {
   const { setCursorVariant, setMenuOpen } = React.useContext(CursorContext);
@@ -14,6 +15,8 @@ export default function Menu() {
   const [language, setLanguage] = React.useState(
     localStorage.getItem("language") || "en"
   );
+  const { setLoading, setElementsLoaded, setElements } =
+    React.useContext(LoadingContext);
 
   const handleMenu = () => {
     setOpen(!open);
@@ -63,7 +66,10 @@ export default function Menu() {
   let location = window.location.pathname;
   const goTo = (link) => {
     handleMenu();
-    if(link === location) return;
+    if (link === location) return;
+    setElementsLoaded(0);
+    setElements(100);
+    setLoading(true);
     navigate(link);
   };
 

@@ -6,13 +6,21 @@ import { CursorContext } from "../../context/CursorContext";
 import { useTranslation } from "react-i18next";
 import { motion, useIsPresent } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import { LoadingContext } from "../../context/LoadingContext";
 
 export default function Coverpage() {
   const { setCursorVariant, menuOpen } = React.useContext(CursorContext);
+  const { setElements, setElementsLoaded } = React.useContext(LoadingContext);
   const [t, i18n] = useTranslation("global");
   const [move, setMove] = React.useState(menuOpen);
 
   const isPresent = useIsPresent();
+
+  React.useState(() => {
+    setElementsLoaded(0);
+    setElements(100);
+    setElements(1);
+  }, []);
 
   React.useEffect(() => {
     setMove(menuOpen);

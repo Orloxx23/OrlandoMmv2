@@ -8,8 +8,9 @@ import { AnimatePresence } from "framer-motion";
 
 import global_en from "./languages/en/global.json";
 import global_es from "./languages/es/global.json";
-import { Menu } from "./components";
+import { LoadScreen, Menu } from "./components";
 import Projects from "./pages/Projects";
+import { LoadingProvider } from "./context/LoadingContext";
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -44,7 +45,7 @@ function App() {
     },
     {
       path: "*",
-      element:<Coverpage />,
+      element: <Coverpage />,
     },
   ]);
 
@@ -53,12 +54,14 @@ function App() {
   return (
     <>
       <CursorProvider>
-        <I18nextProvider i18n={i18next}>
-          <Menu />
-          <AnimatePresence mode="wait">
-            {React.cloneElement(element, { key: location.pathname })}
-          </AnimatePresence>
-        </I18nextProvider>
+        <LoadingProvider>
+          <I18nextProvider i18n={i18next}>
+            <Menu />
+            <AnimatePresence mode="wait">
+              {React.cloneElement(element, { key: location.pathname })}
+            </AnimatePresence>
+          </I18nextProvider>
+        </LoadingProvider>
       </CursorProvider>
     </>
   );
