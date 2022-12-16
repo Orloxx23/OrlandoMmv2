@@ -27,7 +27,7 @@ export default function About() {
             className="about-profile-card"
             initial={{ opacity: 0, y: 250 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.2 + 0.5 }}
           >
             <div className="about-profile-card-image">
               <img
@@ -105,7 +105,7 @@ export default function About() {
             <motion.h1
               initial={{ opacity: 0, x: 250 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.5 + 0.5}}
+              transition={{ delay: 1.0 + 0.5}}
             >
               {t("about.skills")}
             </motion.h1>
@@ -114,7 +114,7 @@ export default function About() {
                 <motion.div
                   initial={{ opacity: 0, y: 100 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: skill.id * 0.1 + 0.5 }}
+                  transition={{ delay: (skill.id * 0.1) + 1.4 }}
                   className="more-about-skills-item"
                   key={skill.id}
                 >
@@ -129,7 +129,7 @@ export default function About() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 + 0.5 }}
+              transition={{ delay: 1.5 + 0.5 }}
               className="more-about-last-container"
             >
               <motion.div

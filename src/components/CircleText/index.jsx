@@ -21,7 +21,7 @@ export default function CircleText({ text, content, alpha }) {
             alt="Orlando Mina"
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: [0, 1.3, 1] }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             onLoad={() => setElementsLoaded(elements && elementsLoaded + 1)}
             onMouseEnter={() => setCursorVariant("img")}
             onMouseLeave={() => setCursorVariant("default")}
@@ -30,7 +30,7 @@ export default function CircleText({ text, content, alpha }) {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
             onMouseEnter={() => setCursorVariant("img")}
             onMouseLeave={() => setCursorVariant("default")}
             className="spining-text-no-content"
@@ -43,7 +43,7 @@ export default function CircleText({ text, content, alpha }) {
         onMouseLeave={() => setCursorVariant("default")}
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 2.5 }}
+        transition={{ duration: 2.5, delay: 0.5 }}
       >
         <p>
           {text.split("").map((letter, i) => (

@@ -49,7 +49,7 @@ export default function Projects() {
             className="projects-content-right"
             initial={{ opacity: 0, y: -200 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.3, ease: "easeInOut" }}
+            transition={{ duration: 0.3, delay: 0.3 + 0.5, ease: "easeInOut" }}
           >
             <div className="projects-content-right-header">
               <h1>{t("projects.title")}</h1>
@@ -63,7 +63,7 @@ export default function Projects() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{
                     duration: 0.05,
-                    delay: 0.2 * project.id,
+                    delay: 0.5 + (0.2) * project.id,
                     ease: "easeInOut",
                   }}
                   onMouseOver={() => setPreviewData(project)}

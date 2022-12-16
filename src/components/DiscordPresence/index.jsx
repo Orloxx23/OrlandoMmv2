@@ -31,6 +31,7 @@ export default function DiscordPresence({ showNick }) {
       <motion.div
         initial={{ opacity: 0, y: -250 }}
         animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
         onMouseEnter={() => setCursorVariant("dark")}
         onMouseLeave={() => setCursorVariant("default")}
         className="discord-presence-container"

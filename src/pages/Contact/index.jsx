@@ -59,7 +59,7 @@ export default function Contact() {
                 animate={{
                   opacity: 1,
                   y: 0,
-                  transition: { duration: 0.5, delay: 0 },
+                  transition: { duration: 0.5, delay: 0 + 0.5 },
                 }}
               >
                 <span
@@ -81,7 +81,7 @@ export default function Contact() {
                   animate={{
                     opacity: 1,
                     y: 0,
-                    transition: { duration: 0.5, delay: 0.2 },
+                    transition: { duration: 0.5, delay: 0.2 + 0.5},
                   }}
                 >
                   orminamadro@gmail.com{" "}
@@ -95,7 +95,7 @@ export default function Contact() {
                 animate={{
                   opacity: 1,
                   y: 0,
-                  transition: { duration: 0.5, delay: 0.4 },
+                  transition: { duration: 0.5, delay: 0.4 + 0.5},
                 }}
               >
                 <span
@@ -121,7 +121,7 @@ export default function Contact() {
                         animate={{
                           opacity: 1,
                           y: 0,
-                          transition: { delay: 0.6 },
+                          transition: { delay: 0.6 + 0.5 },
                         }}
                       >
                         <span>{site.name}</span>
