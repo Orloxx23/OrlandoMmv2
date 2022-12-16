@@ -10,7 +10,8 @@ import { LoadingContext } from "../../context/LoadingContext";
 
 export default function Coverpage() {
   const { setCursorVariant, menuOpen } = React.useContext(CursorContext);
-  const { setElements, setElementsLoaded } = React.useContext(LoadingContext);
+  const { setLoading, setElements, setElementsLoaded } =
+    React.useContext(LoadingContext);
   const [t, i18n] = useTranslation("global");
   const [move, setMove] = React.useState(menuOpen);
 
@@ -20,6 +21,7 @@ export default function Coverpage() {
     setElementsLoaded(0);
     setElements(100);
     setElements(1);
+    setLoading(isPresent);
   }, []);
 
   React.useEffect(() => {
@@ -39,6 +41,9 @@ export default function Coverpage() {
   let location = window.location.pathname;
   const goTo = (link) => {
     if (link === location) return;
+    setElementsLoaded(0);
+    setElements(100);
+    setLoading(true);
     navigate(link);
   };
 
@@ -54,7 +59,11 @@ export default function Coverpage() {
             <motion.h1
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.3 + 0.5, ease: "easeInOut" }}
+              transition={{
+                duration: 0.3,
+                delay: 0.3 + 0.5,
+                ease: "easeInOut",
+              }}
               onMouseEnter={() => setCursorVariant("txt")}
               onMouseLeave={() => setCursorVariant("default")}
             >
@@ -63,7 +72,11 @@ export default function Coverpage() {
             <motion.p
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.5 + 0.5, ease: "easeInOut" }}
+              transition={{
+                duration: 0.3,
+                delay: 0.5 + 0.5,
+                ease: "easeInOut",
+              }}
             >
               {t("coverpage.about")}
             </motion.p>
@@ -71,7 +84,11 @@ export default function Coverpage() {
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.2, delay: 0.8 + 0.5, ease: "easeInOut" }}
+                transition={{
+                  duration: 0.2,
+                  delay: 0.8 + 0.5,
+                  ease: "easeInOut",
+                }}
                 className="fast-access-item"
                 onClick={() => goTo("/projects")}
                 onMouseEnter={() => setCursorVariant("txt")}
@@ -83,7 +100,11 @@ export default function Coverpage() {
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.2, delay: 1.2 + 0.5, ease: "easeInOut" }}
+                transition={{
+                  duration: 0.2,
+                  delay: 1.2 + 0.5,
+                  ease: "easeInOut",
+                }}
                 className="fast-access-item"
                 onClick={() => goTo("/about")}
                 onMouseEnter={() => setCursorVariant("txt")}

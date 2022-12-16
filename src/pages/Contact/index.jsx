@@ -11,7 +11,7 @@ export default function Contact() {
   const isPresent = useIsPresent();
   const { setCursorVariant, menuOpen } = React.useContext(CursorContext);
   const [move, setMove] = React.useState(menuOpen);
-  const { setElements } = React.useContext(LoadingContext);
+  const { setLoading, setElements } = React.useContext(LoadingContext);
 
   const sites = [
     {
@@ -30,6 +30,7 @@ export default function Contact() {
 
   React.useEffect(() => {
     setElements(1);
+    setLoading(isPresent);
   }, []);
 
   const variants = {

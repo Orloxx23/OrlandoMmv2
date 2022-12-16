@@ -12,11 +12,12 @@ import { LoadingContext } from "../../context/LoadingContext";
 export default function About() {
   const { setCursorVariant } = React.useContext(CursorContext);
   const [t, i18n] = useTranslation("global");
-  const { setElements, elementsLoaded, setElementsLoaded } = React.useContext(LoadingContext);
+  const { setLoading, setElements, elementsLoaded, setElementsLoaded } = React.useContext(LoadingContext);
   const isPresent = useIsPresent();
 
   React.useState(() => {
     setElements(2);
+    setLoading(isPresent);
   }, []);
 
   return (
