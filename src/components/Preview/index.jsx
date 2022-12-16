@@ -43,7 +43,7 @@ export default function Preview({ img, name }) {
 
         {loading ? (
           <div className="preview-title">
-            <div class="preview-loader"></div>
+            <div className="preview-loader"></div>
           </div>
         ) : (
           <div className="preview-title">
