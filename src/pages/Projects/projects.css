@@ -89,7 +89,11 @@
 
 @media (max-width: 968px) {
   .projects-content-left {
-    display: none;
+    /* display: none; */
+    position: absolute;
+    visibility: hidden;
+    width: 0;
+    height: 0;
   }
 
   .projects-content-right {

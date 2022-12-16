@@ -49,7 +49,7 @@ export default function Projects() {
             className="projects-content-right"
             initial={{ opacity: 0, y: -200 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.3 + 0.5, ease: "easeInOut" }}
+            transition={{ duration: 0.3, delay: 0.2 + 0.5, ease: "easeInOut" }}
           >
             <div className="projects-content-right-header">
               <h1>{t("projects.title")}</h1>
@@ -77,10 +77,10 @@ export default function Projects() {
         </div>
       </div>
       <motion.div
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
-        style={{ originX: isPresent ? 0 : 1 }}
+        initial={{ scaleY: 1 }}
+        animate={{ scaleY: 0, transition: { duration: 0.5, ease: "circOut" } }}
+        exit={{ scaleY: 1, transition: { duration: 0.5, ease: "circIn" } }}
+        style={{ originY: isPresent ? 0 : 1 }}
         className="privacy-screen"
       />
     </>

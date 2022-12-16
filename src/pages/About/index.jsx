@@ -150,10 +150,10 @@ export default function About() {
         </div>
       </div>
       <motion.div
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
-        style={{ originX: isPresent ? 0 : 1 }}
+        initial={{ scaleY: 1 }}
+        animate={{ scaleY: 0, transition: { duration: 0.5, ease: "circOut" } }}
+        exit={{ scaleY: 1, transition: { duration: 0.5, ease: "circIn" } }}
+        style={{ originY: isPresent ? 0 : 1 }}
         className="privacy-screen"
       />
     </>

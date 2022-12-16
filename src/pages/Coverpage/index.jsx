@@ -113,6 +113,22 @@ export default function Coverpage() {
                 <i className="fa-solid fa-arrow-right-long"></i>
                 <span>{t("coverpage.moreMe")}</span>
               </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                  duration: 0.2,
+                  delay: 1.6 + 0.5,
+                  ease: "easeInOut",
+                }}
+                className="fast-access-item"
+                onClick={() => goTo("/contact")}
+                onMouseEnter={() => setCursorVariant("txt")}
+                onMouseLeave={() => setCursorVariant("default")}
+              >
+                <i className="fa-solid fa-arrow-right-long"></i>
+                <span>{t("coverpage.contact")}</span>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -121,10 +137,10 @@ export default function Coverpage() {
         </div>
       </motion.div>
       <motion.div
-        initial={{ scaleX: 1 }}
-        animate={{ scaleX: 0, transition: { duration: 0.5, ease: "circOut" } }}
-        exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
-        style={{ originX: isPresent ? 0 : 1 }}
+        initial={{ scaleY: 1 }}
+        animate={{ scaleY: 0, transition: { duration: 0.5, ease: "circOut" } }}
+        exit={{ scaleY: 1, transition: { duration: 0.5, ease: "circIn" } }}
+        style={{ originY: isPresent ? 0 : 1 }}
         className="privacy-screen"
       />
     </>

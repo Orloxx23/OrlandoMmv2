@@ -66,13 +66,16 @@ body {
   justify-content: flex-start;
   align-items: center;
   margin-top: 2.5rem;
+  flex-wrap: wrap;
 }
 
 .fast-access-item {
   margin-right: 5rem;
+  width: 33.33333%;
   cursor: pointer;
   color: rgb(179, 179, 179);
   transition: all 0.5s ease;
+  margin-bottom: 1rem;
 }
 
 .fast-access-item:hover {
@@ -110,7 +113,25 @@ body {
   }
 
   .coverpage-right {
-    display: none;
+    /* display: flex; */
+    position: absolute;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+
+  .fast-access {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .fast-access-item {
+    width: 100%;
+
+  }
+
+  .fast-access-item span:hover {
+    letter-spacing: 0rem;
   }
 
   body,

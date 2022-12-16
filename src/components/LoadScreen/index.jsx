@@ -25,7 +25,7 @@ export default function LoadScreen() {
         setTimeout(() => {
           setLoading(false);
           setShow("hide");
-          setElementsLoaded(0);
+          setElementsLoaded(1);
           setElements(100);
         }, 500);
       }
@@ -55,6 +55,7 @@ export default function LoadScreen() {
   const variantes = {
     hide: {
       y: "100%",
+      display: "none",
     },
     show: {
       y: 0,
@@ -67,6 +68,7 @@ export default function LoadScreen() {
       variants={variantes}
       animate={show}
       transition={{ duration: 0.5 }}
+      style={{ overflow: "hidden", display: "flex" }}
     >
       <div className="load-screen-content">
         <div className="loader-text">

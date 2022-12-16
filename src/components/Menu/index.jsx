@@ -17,6 +17,10 @@ export default function Menu() {
   );
   const { setLoading, setElementsLoaded, setElements } =
     React.useContext(LoadingContext);
+  const [showGoBack, setShowGoBack] = React.useState(false);
+
+  let navigate = useNavigate();
+  let location = window.location.pathname;
 
   const handleMenu = () => {
     setOpen(!open);
@@ -36,6 +40,18 @@ export default function Menu() {
   React.useEffect(() => {
     i18n.changeLanguage(language);
   }, []);
+
+  React.useEffect(() => {
+    if (location !== "/") {
+      setTimeout(() => {
+        setShowGoBack(true);
+      }, 500);
+    } else {
+      setTimeout(() => {
+        setShowGoBack(false);
+      }, 500);
+    }
+  }, [location]);
 
   const changeLanguage = (lng) => {
     setLoading(true);
@@ -68,8 +84,6 @@ export default function Menu() {
     },
   ];
 
-  let navigate = useNavigate();
-  let location = window.location.pathname;
   const goTo = (link) => {
     handleMenu();
     if (link === location) return;
@@ -79,9 +93,26 @@ export default function Menu() {
     navigate(link);
   };
 
+  const goBack = () => {
+    setElementsLoaded(0);
+    setElements(100);
+    setLoading(true);
+    navigate("/");
+  };
+
   return (
     <>
       <div className="menu-container">
+        {showGoBack && (
+          <div
+            className="menu-item"
+            onMouseEnter={() => setCursorVariant("img")}
+            onMouseLeave={() => setCursorVariant("default")}
+            onClick={goBack}
+          >
+            <i className="fa-solid fa-arrow-left"></i>
+          </div>
+        )}
         <div
           className="menu-item"
           onMouseEnter={() => setCursorVariant("img")}

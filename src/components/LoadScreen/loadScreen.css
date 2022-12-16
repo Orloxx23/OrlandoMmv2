@@ -22,12 +22,12 @@
 }
 
 /* Loader 1 */
-.loader-text{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.loader-text {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .loader {
@@ -87,13 +87,13 @@
 }
 
 /* Loader 2 */
-.progress-bar{
-    position: relative;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.progress-bar {
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .progress {
@@ -125,4 +125,5 @@
   100% {
     width: 100%;
   }
-} ;
+}
+
