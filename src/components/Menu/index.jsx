@@ -105,7 +105,7 @@ export default function Menu() {
       <div className="menu-container">
         {showGoBack && (
           <div
-            className="menu-item"
+            className="menu-item goBackArrow"
             onMouseEnter={() => setCursorVariant("img")}
             onMouseLeave={() => setCursorVariant("default")}
             onClick={goBack}
