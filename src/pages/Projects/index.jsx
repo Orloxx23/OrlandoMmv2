@@ -41,7 +41,7 @@ export default function Projects() {
             className="projects-content-left"
             initial={{ opacity: 0, y: 200 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.2, ease: "easeInOut" }}
+            transition={{ duration: 0.3, delay: 0.2 + 0.5, ease: "easeInOut" }}
           >
             <Preview img={preview} name={name} />
           </motion.div>
