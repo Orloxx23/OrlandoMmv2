@@ -127,11 +127,15 @@ body {
 
   .fast-access-item {
     width: 100%;
-
   }
 
   .fast-access-item span:hover {
     letter-spacing: 0rem;
+  }
+
+  .coverpage-left {
+    max-width: 100%;
+    padding-left: 1.5rem;
   }
 
   body,
