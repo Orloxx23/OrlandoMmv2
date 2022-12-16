@@ -67,6 +67,7 @@
 }
 
 .menu-content-item p {
+  margin: 0rem;
   cursor: pointer;
 }
 
