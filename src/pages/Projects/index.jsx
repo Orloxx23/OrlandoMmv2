@@ -30,7 +30,7 @@ export default function Projects() {
 
   React.useEffect(() => {
     setElements(1);
-    setElementsLoaded(1);
+    
   }, []);
 
   return (
@@ -57,7 +57,7 @@ export default function Projects() {
             </div>
             <div className="projects-content-right-body">
               {projects.map((project) => (
-                <motion.h1
+                <motion.p
                   key={project.id}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -70,7 +70,7 @@ export default function Projects() {
                   onMouseLeave={() => setPreviewData(null)}
                 >
                   {i18n.language === "en" ? project.en.name : project.es.name}
-                </motion.h1>
+                </motion.p>
               ))}
             </div>
           </motion.div>

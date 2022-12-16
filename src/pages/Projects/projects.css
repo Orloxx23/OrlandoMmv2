@@ -74,17 +74,18 @@
   border-radius: 4px;
 }
 
-.projects-content-right-body h1 {
+.projects-content-right-body p {
   margin: 2rem;
   cursor: pointer;
-  transition: .3s;
+  font-size: 2rem;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.projects-content-right-body h1:hover {
-    padding: 2rem;
-    background: #60606060;
-    margin-left: 2.5rem;
-  }
+.projects-content-right-body p:hover {
+  padding: 2rem;
+  background: #60606060;
+}
 
 @media (max-width: 968px) {
   .projects-content-left {
