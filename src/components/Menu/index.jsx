@@ -38,9 +38,15 @@ export default function Menu() {
   }, []);
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-    setLanguage(lng);
-    localStorage.setItem("language", lng);
+    setLoading(true);
+    setElementsLoaded(0);
+    setElements(1);
+    setTimeout(() => {
+      i18n.changeLanguage(lng);
+      setLanguage(lng);
+      localStorage.setItem("language", lng);
+      setElementsLoaded(1);
+    }, 500);
   };
 
   const menuItems = [
