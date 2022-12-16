@@ -95,6 +95,10 @@
   color: #ffffff;
 }
 
+.goBackArrow {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: #ffffff;
@@ -110,7 +114,10 @@ a {
     margin: 50px 0;
     cursor: pointer;
   }
-  .menu-item-hamburger{
+  .menu-item-hamburger {
     display: none;
+  }
+  .goBackArrow {
+    display: block;
   }
 }
