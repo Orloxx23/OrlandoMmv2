@@ -148,7 +148,7 @@ export default function ProjectReview() {
               )}
               {project?.github ? (
                 <a
-                  href={project.demo}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
