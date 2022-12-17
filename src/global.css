@@ -11,7 +11,7 @@
 }
 
 .no-scrolleable {
-  overflow: hidden !important;
+  overflow: hidden;
 }
 
 main {
@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
 
 @media (max-width: 968px) {
   .no-scrolleable {
-    overflow-y: auto;
+    overflow-y: scroll;
     overflow-x: hidden;
   }
 }
