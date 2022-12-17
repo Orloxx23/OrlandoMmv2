@@ -91,6 +91,7 @@ export default function Menu() {
     setElements(100);
     setLoading(true);
     navigate(link);
+    goToTop();
   };
 
   const goBack = () => {
@@ -98,6 +99,14 @@ export default function Menu() {
     setElements(100);
     setLoading(true);
     navigate("/");
+    goToTop();
+  };
+
+  const goToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
