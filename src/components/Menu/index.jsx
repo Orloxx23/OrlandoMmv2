@@ -99,7 +99,12 @@ export default function Menu() {
     setElementsLoaded(0);
     setElements(100);
     setLoading(true);
-    navigate(-1);
+    if (location.length >= 11) {
+      navigate("/projects");
+    } else {
+      navigate("/");
+    }
+
     goToTop();
   };
 
@@ -112,7 +117,13 @@ export default function Menu() {
 
   return (
     <>
-      <div className={location.length >= 11 ? "menu-container menu-container-background" : "menu-container"}>
+      <div
+        className={
+          location.length >= 11
+            ? "menu-container menu-container-background"
+            : "menu-container"
+        }
+      >
         {showGoBack && (
           <div
             className="menu-item goBackArrow"
