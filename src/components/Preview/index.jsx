@@ -71,6 +71,7 @@ export default function Preview({ img, name, borderRadius }) {
             alt="preview"
             className="preview-img"
             onLoad={() => {
+              loadElement();
               setLoading(false);
             }}
             style={{ borderRadius: borderRadius ? "1.25rem" : "0px" }}
