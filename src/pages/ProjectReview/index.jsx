@@ -136,10 +136,10 @@ export default function ProjectReview() {
                   <i
                     className="fa-solid fa-arrow-up-right-from-square"
                     onMouseEnter={() => {
-                      parseInt(id) !== 1 && setCursorVariant("txt");
+                      setCursorVariant("txt");
                     }}
                     onMouseLeave={() => {
-                      parseInt(id) !== 1 && setCursorVariant("default");
+                      setCursorVariant("default");
                     }}
                   ></i>
                 </a>
@@ -155,10 +155,10 @@ export default function ProjectReview() {
                   <i
                     className="fa-brands fa-github"
                     onMouseEnter={() => {
-                      parseInt(id) !== 1 && setCursorVariant("txt");
+                      setCursorVariant("txt");
                     }}
                     onMouseLeave={() => {
-                      parseInt(id) !== 1 && setCursorVariant("default");
+                      setCursorVariant("default");
                     }}
                   ></i>
                 </a>
