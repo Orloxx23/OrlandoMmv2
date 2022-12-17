@@ -101,6 +101,7 @@
     grid-template-areas:
       "."
       ".";
+    overflow-y: auto;
   }
 
   .coverpage-right {
