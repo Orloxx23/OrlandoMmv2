@@ -12,6 +12,7 @@ import { LoadScreen, Menu } from "./components";
 import Projects from "./pages/Projects";
 import { LoadingProvider } from "./context/LoadingContext";
 import "./global.css"
+import { Page404 } from "./pages";
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -46,7 +47,7 @@ function App() {
     },
     {
       path: "*",
-      element: <Coverpage />,
+      element: <Page404 />,
     },
   ]);
 
