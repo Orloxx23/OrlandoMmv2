@@ -58,7 +58,7 @@ export default function ProjectReview() {
   };
 
   return (
-    <div className="scrolleable">
+    <div className="no-scrolleable">
       {project ? (
         <>
           <div className="projectr-header">
@@ -75,70 +75,162 @@ export default function ProjectReview() {
       <div className="projectr-view">
         <div className="projectr-view-container" onClick={executeScroll}>
           <i
-            className="fa-solid fa-glasses"
+            className="fa-solid fa-angles-down"
             onMouseEnter={() => setCursorVariant("txt")}
             onMouseLeave={() => setCursorVariant("default")}
           ></i>
         </div>
       </div>
-      <div className="projectr-content">
-        <div className="projectr-content-container" ref={infoRef}></div>
+      <div className="projectr-content no-scrolleable">
+        <div className="projectr-content-container" ref={infoRef}>
+          <div className="projectr-content-left">
+            <div className="projectr-content-left-item">
+              <h2>{t("project.category")}</h2>
+              <div className="projectr-content-left-subitem">
+                {i18n.language === "en"
+                  ? project?.en.category.map((c) => <p>{c}</p>)
+                  : project?.es.category.map((c) => <p>{c}</p>)}
+              </div>
+            </div>
+            <div className="projectr-content-left-item">
+              <h2>{t("project.tags")}</h2>
+              <div className="projectr-content-left-subitem">
+                {project?.tags.map((t) => (
+                  <p>{t}</p>
+                ))}
+              </div>
+            </div>
+            <div className="projectr-content-left-item">
+              <h2>{t("project.status")}</h2>
+              <div className="projectr-content-left-subitem projectr-content-left-subitem-center">
+                {i18n.language === "en" ? (
+                  <p>{project?.en.status}</p>
+                ) : (
+                  <p>{project?.es.status}</p>
+                )}
+                <span>
+                  {project?.en.status === "Completed" ? (
+                    <i className="fa-solid fa-check"></i>
+                  ) : (
+                    <i className="fa-solid fa-spinner"></i>
+                  )}
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="projectr-content-right">
+            <div className="projectr-content-right-item">
+              <p>
+                {i18n.language === "en"
+                  ? project?.en.description
+                  : project?.es.description}
+              </p>
+            </div>
+            <div className="projectr-content-right-item">
+              {project?.demo ? (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i
+                    className="fa-solid fa-arrow-up-right-from-square"
+                    onMouseEnter={() => {
+                      parseInt(id) !== 1 && setCursorVariant("txt");
+                    }}
+                    onMouseLeave={() => {
+                      parseInt(id) !== 1 && setCursorVariant("default");
+                    }}
+                  ></i>
+                </a>
+              ) : (
+                <></>
+              )}
+              {project?.github ? (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i
+                    className="fa-brands fa-github"
+                    onMouseEnter={() => {
+                      parseInt(id) !== 1 && setCursorVariant("txt");
+                    }}
+                    onMouseLeave={() => {
+                      parseInt(id) !== 1 && setCursorVariant("default");
+                    }}
+                  ></i>
+                </a>
+              ) : (
+                <></>
+              )}
+            </div>
+            <div className="projectr-content-right-item">
+              <div className="projectr-footer">
+                <motion.div
+                  className="projectr-footer-container"
+                  initial={{ opacity: 0, y: 100 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5, duration: 0.3 }}
+                >
+                  <div
+                    className="projectr-footer-arrow"
+                    onClick={() => goTo("/projects/" + (parseInt(id) - 1))}
+                    style={{
+                      opacity: parseInt(id) === 1 ? 0.2 : 1,
+                      cursor: parseInt(id) === 1 ? "default" : "pointer",
+                    }}
+                  >
+                    <i
+                      className="fa-solid fa-chevron-left"
+                      onMouseEnter={() => {
+                        parseInt(id) !== 1 && setCursorVariant("txt");
+                      }}
+                      onMouseLeave={() => {
+                        parseInt(id) !== 1 && setCursorVariant("default");
+                      }}
+                    ></i>
+                  </div>
+                  <div className="projectr-footer-title">
+                    <p
+                      onClick={() => goTo("/projects")}
+                      onMouseEnter={() => setCursorVariant("txt")}
+                      onMouseLeave={() => setCursorVariant("default")}
+                    >
+                      {t("projects.title")}
+                    </p>
+                  </div>
+                  <div
+                    className="projectr-footer-arrow"
+                    onClick={() => goTo("/projects/" + (parseInt(id) + 1))}
+                    style={{
+                      opacity: parseInt(id) === projects.length ? 0.2 : 1,
+                      cursor:
+                        parseInt(id) === projects.length
+                          ? "default"
+                          : "pointer",
+                    }}
+                  >
+                    <i
+                      className="fa-solid fa-chevron-right"
+                      onMouseEnter={() => {
+                        parseInt(id) !== projects.length &&
+                          setCursorVariant("txt");
+                      }}
+                      onMouseLeave={() => {
+                        parseInt(id) !== projects.length &&
+                          setCursorVariant("default");
+                      }}
+                    ></i>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="projectr-footer">
-        <motion.div
-          className="projectr-footer-container"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.3 }}
-        >
-          <div
-            className="projectr-footer-arrow"
-            onClick={() => goTo("/projects/" + (parseInt(id) - 1))}
-            style={{
-              opacity: parseInt(id) === 1 ? 0.2 : 1,
-              cursor: parseInt(id) === 1 ? "default" : "pointer",
-            }}
-          >
-            <i
-              className="fa-solid fa-chevron-left"
-              onMouseEnter={() => {
-                parseInt(id) !== 1 && setCursorVariant("txt");
-              }}
-              onMouseLeave={() => {
-                parseInt(id) !== 1 && setCursorVariant("default");
-              }}
-            ></i>
-          </div>
-          <div className="projectr-footer-title">
-            <p
-              onClick={() => goTo("/projects")}
-              onMouseEnter={() => setCursorVariant("txt")}
-              onMouseLeave={() => setCursorVariant("default")}
-            >
-              {t("projects.title")}
-            </p>
-          </div>
-          <div
-            className="projectr-footer-arrow"
-            onClick={() => goTo("/projects/" + (parseInt(id) + 1))}
-            style={{
-              opacity: parseInt(id) === projects.length ? 0.2 : 1,
-              cursor: parseInt(id) === projects.length ? "default" : "pointer",
-            }}
-          >
-            <i
-              className="fa-solid fa-chevron-right"
-              onMouseEnter={() => {
-                parseInt(id) !== projects.length && setCursorVariant("txt");
-              }}
-              onMouseLeave={() => {
-                parseInt(id) !== projects.length && setCursorVariant("default");
-              }}
-            ></i>
-          </div>
-        </motion.div>
-      </div>
       <motion.div
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0, transition: { duration: 0.5, ease: "circOut" } }}

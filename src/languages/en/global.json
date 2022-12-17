@@ -1,5 +1,5 @@
 {
-  "menu":{
+  "menu": {
     "home": "Home",
     "about": "About me",
     "projects": "Projects",
@@ -15,7 +15,7 @@
     "contact": "Contact me"
   },
 
-  "about":{
+  "about": {
     "title": "About me",
     "text": "Orlando is a frontend developer with an interest in UX/UI design. He is an expert in HTML, CSS, JavaScript and React.",
     "born": "Born",
@@ -28,21 +28,27 @@
     "skills": "Skills and tools"
   },
 
-  "discord":{
+  "discord": {
     "playing": "Playing",
     "online": "Online",
     "offline": "Offline"
   },
 
-  "contact":{
+  "contact": {
     "circleText": "Contact - Contact - Contact - Contact - ",
     "email": "Email",
     "other": "Other sites"
   },
 
-  "projects":{
+  "projects": {
     "title": "Projects",
     "preview": "Preview",
     "text": "Here are some of my projects. I'm always working on new things, so check back later for updates."
+  },
+
+  "project": {
+    "category": "Category",
+    "tags": "Tags",
+    "status": "Status"
   }
 }

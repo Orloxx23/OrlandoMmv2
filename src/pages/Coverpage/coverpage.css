@@ -88,10 +88,6 @@
   transition: all 0.5s ease;
 }
 
-.fast-access-item span:hover {
-  letter-spacing: 0.45rem;
-}
-
 @media (max-width: 968px) {
   .coverpage {
     width: 100vw;

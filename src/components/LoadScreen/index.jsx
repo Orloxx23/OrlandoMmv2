@@ -34,7 +34,7 @@ export default function LoadScreen() {
       setElementsLoaded(0);
       setElements(100);
     }
-    //console.log(elementsLoaded + "/" + elements);
+    console.log(elementsLoaded + "/" + elements);
   }, [
     loading,
     elementsLoaded,

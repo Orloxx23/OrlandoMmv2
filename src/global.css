@@ -19,7 +19,14 @@ main {
 }
 
 body {
+  overflow-x: hidden;
   background: #303030;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;     /* Tamaño del scroll en vertical */
+  height: 8px;    /* Tamaño del scroll en horizontal */
+  display: none;  /* Ocultar scroll */
 }
 
 @media (max-width: 968px) {

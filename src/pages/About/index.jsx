@@ -22,7 +22,7 @@ export default function About() {
 
   return (
     <>
-      <div className="about-main-container no-scrolleable">
+      <div className="about-main-container">
         <div className="about-container">
           <motion.div
             className="about-profile-card"
