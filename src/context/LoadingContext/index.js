@@ -7,6 +7,10 @@ function LoadingProvider(props) {
   const [elementsLoaded, setElementsLoaded] = React.useState(0);
   const [loading, setLoading] = React.useState(true);
 
+  const loadElement = () => {
+    setElementsLoaded((prev) => prev + 1);
+  }
+
   React.useEffect(() => {
     if (elementsLoaded < elements && elements > 0) {
       setLoading(true);
@@ -22,6 +26,7 @@ function LoadingProvider(props) {
         setLoading,
         elementsLoaded,
         setElementsLoaded,
+        loadElement,
       }}
     >
       <LoadScreen loading={loading} />

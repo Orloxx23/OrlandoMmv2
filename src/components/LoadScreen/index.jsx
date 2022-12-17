@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 import "./loadScreen.css";
@@ -15,7 +15,7 @@ export default function LoadScreen() {
     setElementsLoaded,
     setElements,
   } = React.useContext(LoadingContext);
-  const [progress, setProgress] = React.useState(0);
+  const [progress, setProgress] = React.useState(1);
   const [show, setShow] = React.useState("show");
 
   React.useEffect(() => {
@@ -25,7 +25,7 @@ export default function LoadScreen() {
         setTimeout(() => {
           setLoading(false);
           setShow("hide");
-          setElementsLoaded(1);
+          setElementsLoaded(0);
           setElements(100);
         }, 500);
       }

@@ -204,11 +204,11 @@
 }
 
 @media (max-width: 968px) {
-  main,
+  /* main,
   body {
     overflow-y: scroll;
     overflow-x: hidden;
-  }
+  } */
 
   .about-main-container,
   .about-container {

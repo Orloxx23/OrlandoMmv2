@@ -6,15 +6,20 @@ import previewVideo from "../../assets/video/preview.mp4";
 import { CursorContext } from "../../context/CursorContext";
 import { LoadingContext } from "../../context/LoadingContext";
 
-export default function Preview({ img, name }) {
+export default function Preview({ img, name, borderRadius }) {
   const [t, i18n] = useTranslation("global");
   const { setCursorVariant } = React.useContext(CursorContext);
-  const { elementsLoaded, setElementsLoaded } =
-    React.useContext(LoadingContext);
+  const { loadElement } = React.useContext(LoadingContext);
   const [loading, setLoading] = React.useState(false);
+
+  let location = window.location.pathname;
 
   React.useEffect(() => {
     setLoading(true);
+
+    if (location.length >= 11) {
+      setLoading(false);
+    }
 
     if (name === "" || name === null) {
       setLoading(false);
@@ -27,6 +32,7 @@ export default function Preview({ img, name }) {
         className="preview-container"
         onMouseEnter={() => setCursorVariant("img")}
         onMouseLeave={() => setCursorVariant("default")}
+        style={{ borderRadius: borderRadius ? "1.25rem" : "0px" }}
       >
         <video
           autoPlay
@@ -34,19 +40,26 @@ export default function Preview({ img, name }) {
           loop
           className="preview-video"
           onPlay={() => {
-            setElementsLoaded(elementsLoaded + 1);
+            loadElement();
             setLoading(false);
           }}
+          style={{ borderRadius: borderRadius ? "1.25rem" : "0px" }}
         >
           <source src={previewVideo} type="video/mp4" />
         </video>
 
         {loading ? (
-          <div className="preview-title">
+          <div
+            className="preview-title"
+            style={{ borderRadius: borderRadius ? "1.25rem" : "0px" }}
+          >
             <div className="preview-loader"></div>
           </div>
         ) : (
-          <div className="preview-title">
+          <div
+            className="preview-title"
+            style={{ borderRadius: borderRadius ? "1.25rem" : "0px" }}
+          >
             <h1>{name ? name : t("projects.title")}</h1>
             <p>{name ? "" : t("projects.text")}</p>
           </div>
@@ -60,6 +73,7 @@ export default function Preview({ img, name }) {
             onLoad={() => {
               setLoading(false);
             }}
+            style={{ borderRadius: borderRadius ? "1.25rem" : "0px" }}
           />
         )}
       </div>

@@ -11,7 +11,7 @@ export default function DiscordPresence({ showNick }) {
   const [discordData, setDiscordData] = React.useState([]);
   const [t, i18n] = useTranslation("global");
   const { setCursorVariant } = React.useContext(CursorContext);
-  const { elementsLoaded, setElementsLoaded } =
+  const { loadElement } =
     React.useContext(LoadingContext);
 
   React.useEffect(() => {
@@ -71,7 +71,7 @@ export default function DiscordPresence({ showNick }) {
                 discordData.length > 0 ? discordData[0].avatar_url : discordImg
               }
               alt="Nikkeey"
-              onLoad={() => setElementsLoaded(elementsLoaded + 1)}
+              onLoad={loadElement}
             />
           </div>
           <div

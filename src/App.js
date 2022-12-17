@@ -3,16 +3,21 @@ import { CursorProvider } from "./context/CursorContext";
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
 import { useRoutes, useLocation } from "react-router-dom";
-import { About, Contact, Coverpage } from "./pages";
+import {
+  About,
+  Contact,
+  Coverpage,
+  Projects,
+  ProjectReview,
+  Page404,
+} from "./pages";
 import { AnimatePresence } from "framer-motion";
 
 import global_en from "./languages/en/global.json";
 import global_es from "./languages/es/global.json";
-import { LoadScreen, Menu } from "./components";
-import Projects from "./pages/Projects";
+import { Menu } from "./components";
 import { LoadingProvider } from "./context/LoadingContext";
-import "./global.css"
-import { Page404 } from "./pages";
+import "./global.css";
 
 i18next.init({
   interpolation: { escapeValue: false },
@@ -32,6 +37,11 @@ function App() {
     {
       path: "/contact",
       element: <Contact />,
+    },
+    {
+      path: "/projects/:id",
+      element: <ProjectReview />,
+      errorElement: <Page404 />,
     },
     {
       path: "/projects",

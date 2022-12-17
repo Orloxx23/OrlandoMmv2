@@ -6,7 +6,7 @@ import { LoadingContext } from "../../context/LoadingContext";
 
 export default function CircleText({ text, content, alpha }) {
   const { setCursorVariant } = React.useContext(CursorContext);
-  const { elements, elementsLoaded, setElementsLoaded } = React.useContext(LoadingContext);
+  const { loadElement } = React.useContext(LoadingContext);
   const lenght = text.length;
   const deg = 360 / lenght;
 
@@ -22,7 +22,7 @@ export default function CircleText({ text, content, alpha }) {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: [0, 1.3, 1] }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            onLoad={() => setElementsLoaded(elements && elementsLoaded + 1)}
+            onLoad={loadElement}
             onMouseEnter={() => setCursorVariant("img")}
             onMouseLeave={() => setCursorVariant("default")}
           />

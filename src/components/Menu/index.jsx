@@ -54,6 +54,7 @@ export default function Menu() {
   }, [location]);
 
   const changeLanguage = (lng) => {
+    if (lng === language) return;
     setLoading(true);
     setElementsLoaded(0);
     setElements(1);
@@ -98,7 +99,7 @@ export default function Menu() {
     setElementsLoaded(0);
     setElements(100);
     setLoading(true);
-    navigate("/");
+    navigate(-1);
     goToTop();
   };
 
@@ -111,7 +112,7 @@ export default function Menu() {
 
   return (
     <>
-      <div className="menu-container">
+      <div className={location.length >= 11 ? "menu-container menu-container-background" : "menu-container"}>
         {showGoBack && (
           <div
             className="menu-item goBackArrow"

@@ -10,7 +10,7 @@ import { LoadingContext } from "../../context/LoadingContext";
 
 export default function Coverpage() {
   const { setCursorVariant, menuOpen } = React.useContext(CursorContext);
-  const { setLoading, setElements, setElementsLoaded } =
+  const { setLoading, setElements } =
     React.useContext(LoadingContext);
   const [t, i18n] = useTranslation("global");
   const [move, setMove] = React.useState(menuOpen);
@@ -18,8 +18,6 @@ export default function Coverpage() {
   const isPresent = useIsPresent();
 
   React.useState(() => {
-    setElementsLoaded(0);
-    setElements(100);
     setElements(1);
     setLoading(isPresent);
   }, []);
@@ -41,8 +39,6 @@ export default function Coverpage() {
   let location = window.location.pathname;
   const goTo = (link) => {
     if (link === location) return;
-    setElementsLoaded(0);
-    setElements(100);
     setLoading(true);
     navigate(link);
   };
@@ -50,7 +46,7 @@ export default function Coverpage() {
   return (
     <>
       <motion.div
-        className="coverpage"
+        className="coverpage no-scrolleable"
         variants={variants}
         animate={move ? "menuOpen" : "default"}
       >

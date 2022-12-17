@@ -7,6 +7,7 @@ import { projects } from "../../assets/data/projects";
 import { Preview } from "../../components/";
 import { CursorContext } from "../../context/CursorContext";
 import { LoadingContext } from "../../context/LoadingContext";
+import { useNavigate } from "react-router-dom";
 
 export default function Projects() {
   const isPresent = useIsPresent();
@@ -15,6 +16,9 @@ export default function Projects() {
   const [name, setName] = React.useState(null);
   const { setCursorVariant } = React.useContext(CursorContext);
   const { setLoading, setElements } = React.useContext(LoadingContext);
+
+  let navigate = useNavigate();
+  let location = window.location.pathname;
 
   const setPreviewData = (project) => {
     if (project) {
@@ -33,6 +37,12 @@ export default function Projects() {
     setLoading(isPresent);
   }, []);
 
+  const goToProject = (project) => {
+    //const name = project.replace(/ /g, "-").toLowerCase();
+    setLoading(true);
+    navigate(`/projects/${project}`);
+  };
+
   return (
     <>
       <div className="projects-container">
@@ -43,7 +53,7 @@ export default function Projects() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3, delay: 0.2 + 0.5, ease: "easeInOut" }}
           >
-            <Preview img={preview} name={name} />
+            <Preview img={preview} name={name} borderRadius={true} />
           </motion.div>
           <motion.div
             className="projects-content-right"
@@ -63,11 +73,12 @@ export default function Projects() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{
                     duration: 0.05,
-                    delay: 0.5 + (0.2) * project.id,
+                    delay: 0.5 + 0.2 * project.id,
                     ease: "easeInOut",
                   }}
                   onMouseOver={() => setPreviewData(project)}
                   onMouseLeave={() => setPreviewData(null)}
+                  onClick={() => goToProject(project.id)}
                 >
                   {i18n.language === "en" ? project.en.name : project.es.name}
                 </motion.p>

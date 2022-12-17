@@ -7,7 +7,7 @@
   background-attachment: fixed;
   background-size: cover; */
   box-shadow: inset 0px 0px 5rem 1rem rgba(0, 0, 0, 0.5);
-  border-radius: 1.25rem;
+  /* border-radius: 1.25rem; */
 }
 
 .preview-video {
@@ -17,7 +17,7 @@
   object-fit: cover;
   opacity: 0.1;
   z-index: 2;
-  border-radius: 1.25rem;
+  /* border-radius: 1.25rem; */
 }
 
 .preview-img {
@@ -25,9 +25,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   z-index: 1;
   opacity: 0.3;
-  border-radius: 1.25rem;
+  /* border-radius: 1.25rem; */
 }
 
 .preview-title{
@@ -45,7 +46,7 @@
     text-align: center;
     flex-direction: column;
     box-shadow: inset 0px 0px 5rem 1rem black;
-    border-radius: 1.25rem;
+    /* border-radius: 1.25rem; */
 }
 
 .preview-title p{
@@ -65,5 +66,14 @@
 @keyframes rot1 {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 968px){
+  .preview-title{
+    font-size: 1rem;
+  }
+  .preview-title p{
+    font-size: 1rem;
   }
 }
