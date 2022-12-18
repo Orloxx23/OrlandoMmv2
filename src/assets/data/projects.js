@@ -6,6 +6,9 @@ import capture3 from "../img/projects/Captura3-min.PNG";
 import preview3 from "../img/projects/web3-preview-min.gif";
 import capture4 from "../img/projects/Captura4-min.PNG";
 import preview4 from "../img/projects/colombia-preview.gif";
+import capture5 from "../img/projects/Captura5.PNG";
+import preview5 from "../img/projects/get-pokedex-preview.gif";
+
 
 export const projects = [
   {
@@ -88,5 +91,25 @@ export const projects = [
     demo: "https://orloxx23.github.io/Conflicto-Colombia/",
     github: "https://github.com/Orloxx23/Conflicto-Colombia",
     tags: ["React"],
+  },
+  {
+    id: 5,
+    en: {
+      name: "Get pokedex",
+      description: "Presentation page for my pokedex application.",
+      category: ["Web page", "Personal project"],
+      status: "Completed",
+    },
+    es: {
+      name: "Obtener pokedex",
+      description: "Pagina de presentacion para mi aplicación de pokedex.",
+      category: ["Página web", "Proyecto personal"],
+      status: "Completado",
+    },
+    image: capture5,
+    preview: preview5,
+    demo: "https://orloxx23.github.io/get-pokedex",
+    github: "https://github.com/Orloxx23/get-pokedex",
+    tags: ["React", "Spline", "Bootstrap Studio"],
   },
 ];
