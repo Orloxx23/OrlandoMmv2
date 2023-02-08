@@ -9,7 +9,7 @@ import preview4 from "../img/projects/colombia-preview.gif";
 import capture5 from "../img/projects/Captura5.PNG";
 import preview5 from "../img/projects/get-pokedex-preview.gif";
 import capture6 from "../img/projects/Captura6.PNG";
-
+import capture7 from "../img/projects/Captura7.PNG";
 
 export const projects = [
   {
@@ -132,5 +132,25 @@ export const projects = [
     demo: "https://orloxx23.github.io/PlatziTravel/",
     github: "https://github.com/Orloxx23/PlatziTravel",
     tags: ["Tailwind CSS"],
+  },
+  {
+    id: 7,
+    en: {
+      name: "Valorant Stats",
+      description: "It allows Valorant users to search for players and view their game history.",
+      category: ["Web application", "Personal project"],
+      status: "In progress",
+    },
+    es: {
+      name: "Estadísticas de Valorant",
+      description: "Permite a los usuarios de Valorant buscar jugadores y ver su historial de juego.",
+      category: ["Aplicación web", "Proyecto personal"],
+      status: "En desarrollo",
+    },
+    image: capture7,
+    preview: capture7,
+    demo: "https://vlrstats.vercel.app",
+    github: "https://github.com/Orloxx23/vlrstats",
+    tags: ["React"],
   },
 ];
