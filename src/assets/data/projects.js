@@ -2,13 +2,10 @@ import capture1 from "../img/projects/Captura1-min.PNG";
 import preview1 from "../img/projects/todolist-preview-min.gif";
 import capture2 from "../img/projects/Captura2-min.PNG";
 import preview2 from "../img/projects/valorantfa-preview-min.gif";
-import capture3 from "../img/projects/Captura3-min.PNG";
-import preview3 from "../img/projects/web3-preview-min.gif";
 import capture4 from "../img/projects/Captura4-min.PNG";
 import preview4 from "../img/projects/colombia-preview.gif";
 import capture5 from "../img/projects/Captura5.PNG";
 import preview5 from "../img/projects/get-pokedex-preview.gif";
-import capture6 from "../img/projects/Captura6.PNG";
 import capture7 from "../img/projects/Captura7.PNG";
 
 export const projects = [
@@ -56,26 +53,6 @@ export const projects = [
   {
     id: 3,
     en: {
-      name: "Web3 voting system with CELO",
-      description: "Simple Web3 voting system.",
-      category: ["Web application", "Course project"],
-      status: "Completed",
-    },
-    es: {
-      name: "Sistema de votación web3 con CELO",
-      description: "Sencillo sistema de votación Web3.",
-      category: ["Aplicación web", "Proyecto de curso"],
-      status: "Completado",
-    },
-    image: capture3,
-    preview: preview3,
-    demo: "http://votacion-celo.vercel.app/",
-    github: "https://github.com/Orloxx23/Votacion-Celo",
-    tags: ["React", "Solidity", "CELO"],
-  },
-  {
-    id: 4,
-    en: {
       name: "Armed conflict in Colombia",
       description: "History of the armed conflict in Colombia.",
       category: ["Web page", "Personal project"],
@@ -94,7 +71,7 @@ export const projects = [
     tags: ["React"],
   },
   {
-    id: 5,
+    id: 4,
     en: {
       name: "Get pokedex",
       description: "Presentation page for my pokedex application.",
@@ -114,27 +91,7 @@ export const projects = [
     tags: ["React", "Spline", "Bootstrap Studio"],
   },
   {
-    id: 6,
-    en: {
-      name: "Platzi Travel",
-      description: "The website that will show you information about lodgings around the world.",
-      category: ["Web page", "Course project"],
-      status: "Completed",
-    },
-    es: {
-      name: "Platzi Travel",
-      description: "El sitio web que te mostrará información sobre hospedajes en todo el mundo.",
-      category: ["Página web", "Proyecto de curso"],
-      status: "Completado",
-    },
-    image: capture6,
-    preview: capture6,
-    demo: "https://orloxx23.github.io/PlatziTravel/",
-    github: "https://github.com/Orloxx23/PlatziTravel",
-    tags: ["Tailwind CSS"],
-  },
-  {
-    id: 7,
+    id: 5,
     en: {
       name: "Valorant Stats",
       description: "It allows Valorant users to search for players and view their game history.",
