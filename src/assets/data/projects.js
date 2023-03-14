@@ -69,7 +69,7 @@ export const projects = [
     tags: ["React"],
   },
   {
-    id: 5,
+    id: 4,
     en: {
       name: "Valorant Stats",
       description: "It allows Valorant users to search for players and view their game history.",
