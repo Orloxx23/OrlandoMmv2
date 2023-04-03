@@ -1,6 +1,7 @@
 import capture1 from "../img/projects/Captura1-min.PNG";
 import preview1 from "../img/projects/todolist-preview-min.gif";
 import capture7 from "../img/projects/Captura7.PNG";
+import capture2 from "../img/projects/Captura2.PNG";
 
 export const projects = [
   {
@@ -43,5 +44,25 @@ export const projects = [
     demo: "https://vlrstats.vercel.app",
     github: "https://github.com/Orloxx23/vlrstats",
     tags: ["React"],
+  },
+  {
+    id: 3,
+    en: {
+      name: "Taply",
+      description: "Is a remote control for Valorant. Select the game mode, modify the room and choose your favorite agent from your mobile device.",
+      category: ["Web page", "Personal project"],
+      status: "In progress",
+    },
+    es: {
+      name: "Taply",
+      description: "Es un control remoto para Valorant. Selecciona el modo de juego, modifica la sala y elige a tu agente favorito desde tu dispositivo móvil.",
+      category: ["Pagina web", "Proyecto personal"],
+      status: "En desarrollo",
+    },
+    image: capture2,
+    preview: capture2,
+    demo: "https://orloxx23.github.io/Taply-page/",
+    github: "",
+    tags: ["HTML", "CSS", "JavaScript"],
   },
 ];
