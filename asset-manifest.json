@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/OrlandoMmv2/static/css/main.c6bbe210.css",
+    "main.js": "/OrlandoMmv2/static/js/main.1c96c276.js",
+    "static/js/227.f6e313aa.chunk.js": "/OrlandoMmv2/static/js/227.f6e313aa.chunk.js",
+    "static/js/526.56cac75b.chunk.js": "/OrlandoMmv2/static/js/526.56cac75b.chunk.js",
+    "static/js/232.cb4d4c0b.chunk.js": "/OrlandoMmv2/static/js/232.cb4d4c0b.chunk.js",
+    "static/js/237.0e2f84ea.chunk.js": "/OrlandoMmv2/static/js/237.0e2f84ea.chunk.js",
+    "static/media/preview.mp4": "/OrlandoMmv2/static/media/preview.60db13cf8aab8566a681.mp4",
+    "static/media/Captura2.PNG": "/OrlandoMmv2/static/media/Captura2.38d1f806c23a228b18d0.PNG",
+    "static/media/me2.png": "/OrlandoMmv2/static/media/me2.a9397117e8735ac70ba5.png",
+    "static/media/me.png": "/OrlandoMmv2/static/media/me.970e3982763e43c6b0be.png",
+    "static/media/Captura7.PNG": "/OrlandoMmv2/static/media/Captura7.6855925a4f15fc0d19d2.PNG",
+    "static/media/Captura1-min.PNG": "/OrlandoMmv2/static/media/Captura1-min.b234dbac75fe75ee288a.PNG",
+    "static/media/discord.png": "/OrlandoMmv2/static/media/discord.f80d41a5403e5f74000a.png",
+    "index.html": "/OrlandoMmv2/index.html",
+    "main.c6bbe210.css.map": "/OrlandoMmv2/static/css/main.c6bbe210.css.map",
+    "main.1c96c276.js.map": "/OrlandoMmv2/static/js/main.1c96c276.js.map",
+    "227.f6e313aa.chunk.js.map": "/OrlandoMmv2/static/js/227.f6e313aa.chunk.js.map",
+    "526.56cac75b.chunk.js.map": "/OrlandoMmv2/static/js/526.56cac75b.chunk.js.map",
+    "232.cb4d4c0b.chunk.js.map": "/OrlandoMmv2/static/js/232.cb4d4c0b.chunk.js.map",
+    "237.0e2f84ea.chunk.js.map": "/OrlandoMmv2/static/js/237.0e2f84ea.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c6bbe210.css",
+    "static/js/main.1c96c276.js"
+  ]
+}
