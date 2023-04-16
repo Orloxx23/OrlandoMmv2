@@ -1,6 +1,7 @@
 import capture1 from "../img/projects/Captura1-min.PNG";
 import capture7 from "../img/projects/Captura7.PNG";
 import capture2 from "../img/projects/Captura2.PNG";
+import fusion from "../img/projects/fusion.png";
 
 export const projects = [
   {
@@ -69,4 +70,24 @@ export const projects = [
     github: "",
     tags: ["HTML", "CSS", "JavaScript"],
   },
+  {
+    id: 4,
+    en: {
+      name: "Fusion eSports",
+      description: "Unofficial website for Fusion eSports. I did it to test myself and try to do new and interesting things.",
+      category: ["Web page", "Personal project"],
+      status: "Completed",
+    },
+    es: {
+      name: "Fusion eSports",
+      description: "Sitio web no oficial para Fusion eSports. Lo hice para probarme e intentar hacer cosas nuevas e interesantes.",
+      category: ["Pagina web", "Proyecto personal"],
+      status: "Completado",
+    },
+    image: fusion,
+    preview: fusion,
+    demo: "https://fusiongg.vercel.app",
+    github: "https://github.com/Orloxx23/fusionesports",
+    tags: ["React", "Youtube API"],
+  }
 ];
